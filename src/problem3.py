@@ -100,8 +100,8 @@ def problem3(rect, n, window):
         circ = rg.Circle(p1,r)
         circ.attach_to(window)
         window.render()
-        p1.x = p1.x + math.cos(45)*r*2.71
-        p1.y = p1.y + math.cos(45) * r*2.71
+        p1.x = p1.x + math.cos(45)*r*2.7
+        p1.y = p1.y + math.cos(45) * r*2.7
 
 
 
