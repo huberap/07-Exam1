@@ -2,8 +2,8 @@
 Exam 1, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Alec Huber.  March 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -92,8 +92,21 @@ def problem3(rect, n, window):
       :type n:       int
       :type window:  rg.RoseWindow
     """
+    rect.attach_to(window)
+    r = rect.get_height()/2
+    p1 = rect.get_lower_right_corner()
+    import math
+    for k in range(n):
+        circ = rg.Circle(p1,r)
+        circ.attach_to(window)
+        window.render()
+        p1.x = p1.x + math.cos(45)*r*2.71
+        p1.y = p1.y + math.cos(45) * r*2.71
+
+
+
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function, TESTING each step as you go.
+    # DONE: 2. Implement and test this function, TESTING each step as you go.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
