@@ -231,17 +231,24 @@ def run_test_problem1b():
     print('  Expected:', expected)
     print('  Actual:  ', answer)
 
-    expected = 0
+    expected = 3
     answer = problem1b(3)
     print()
     print('Test 2')
     print('  Expected:', expected)
     print('  Actual:  ', answer)
 
-    expected = 0
-    answer = problem1b(3)
+    expected = 64
+    answer = problem1b(4)
     print()
     print('Test 3')
+    print('  Expected:', expected)
+    print('  Actual:  ', answer)
+
+    expected =143
+    answer = problem1b(5)
+    print()
+    print('Test 4')
     print('  Expected:', expected)
     print('  Actual:  ', answer)
 
@@ -266,11 +273,11 @@ def problem1b(r):
            and the sum of the above numbers is 682
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE 5. Implement and test this function.
     #          See the IMPORTANT NOTE just before the DEF above.
     # -------------------------------------------------------------------------
     sum = 0
-    for k in range(r-(r**3)+1):
+    for k in range((r**2)-r+1):
         if product_of_digits(k+r) <= r:
             sum = sum + (k+r)
     return sum
